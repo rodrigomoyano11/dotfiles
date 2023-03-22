@@ -1,0 +1,26 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="$HOME/.oh-my-zsh"
+export PS1="%1d> "
+
+# Formats
+HIST_STAMPS="dd/mm/yyyy"
+
+# Plugins
+plugins=(
+   zsh-autosuggestions
+   zsh-syntax-highlighting
+   zsh-shift-select
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Options
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+
+# Key bindings
+bindkey "^Z" undo
+
+# bindkey "^C" copy-region-as-kill
+bindkey "^V" yank
+# bindkey "^X" cut-region-as-kill
