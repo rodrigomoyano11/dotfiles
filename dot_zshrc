@@ -8,6 +8,9 @@ HIST_STAMPS="dd/mm/yyyy"
 
 # Plugins
 plugins=(
+   git
+   ssh-agent
+   npm
    zsh-autosuggestions
    zsh-syntax-highlighting
    zsh-shift-select
