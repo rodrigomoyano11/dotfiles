@@ -31,5 +31,5 @@ npm install -g npm pnpm
 npm i -g @githubnext/github-copilot-cli
 
 # Add dotfiles
-curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/dot_zshrc >~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshrc >~/.zshrc
 zsh
