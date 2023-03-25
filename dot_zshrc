@@ -8,20 +8,22 @@ HIST_STAMPS="dd/mm/yyyy"
 
 # Plugins
 plugins=(
-   git
-   ssh-agent
-   npm
-   zsh-autosuggestions
-   zsh-syntax-highlighting
-   zsh-shift-select
+  git
+  ssh-agent
+  npm
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  zsh-shift-select
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # History management
-export HISTFILE=/dc/shellhistory/.zsh_history
-export PROMPT_COMMAND='history -a'
-sudo chown -R vscode /dc/shellhistory
+if id vscode >/dev/null 2>&1; then
+  export HISTFILE=/dc/shellhistory/.zsh_history
+  export PROMPT_COMMAND='history -a'
+  sudo chown -R vscode /dc/shellhistory
+fi
 
 # Options
 DISABLE_AUTO_UPDATE=true
