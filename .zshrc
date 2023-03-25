@@ -5,9 +5,6 @@ export PS1="%1d> "
 
 # Plugins
 plugins=(
-  git
-  ssh-agent
-  npm
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-shift-select
