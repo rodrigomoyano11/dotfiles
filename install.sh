@@ -1,8 +1,8 @@
 #!bin/bash
 
 # Upgrade packages
-# apt-get -y update
-# apt-get -y upgrade
+apt-get -y update
+apt-get -y upgrade
 
 # Install zsh
 apt-get install -y zsh
@@ -16,6 +16,9 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y
 # Install Node.js packages
 npm install -g npm pnpm
 npm i -g @githubnext/github-copilot-cli
+
+# Auth
+github-copilot-cli auth
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -31,4 +34,6 @@ curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshr
 # Change default shell to zsh
 chsh --shell $(which zsh)
 
-zsh
+# Add SSH Keys
+eval $(ssh-agent -s)
+ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]

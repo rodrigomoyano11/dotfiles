@@ -24,10 +24,9 @@ HIST_STAMPS="dd/mm/yyyy"
 DISABLE_AUTO_UPDATE=true
 DISABLE_UPDATE_PROMPT=true
 
-zstyle ':omz:load' no-config true
-
 # Key bindings
 bindkey "^Z" undo
 
 # Aliases
 eval "$(github-copilot-cli alias -- "$0")"
+eval $(ssh-agent -s)
