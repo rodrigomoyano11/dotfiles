@@ -13,9 +13,6 @@ apt-get install -y curl git openssh-client
 # Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
 
-# Change default shell to zsh
-chsh --shell $(which zsh)
-
 # Install Node.js packages
 npm install -g npm pnpm
 npm i -g @githubnext/github-copilot-cli
@@ -30,3 +27,8 @@ git clone https://github.com/jirutka/zsh-shift-select ${ZSH_CUSTOM:-~/.oh-my-zsh
 
 # Add dotfiles
 curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshrc >~/.zshrc
+
+# Change default shell to zsh
+chsh --shell $(which zsh)
+
+zsh
