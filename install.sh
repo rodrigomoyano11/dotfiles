@@ -4,9 +4,7 @@
 apt-get install -y zsh
 
 # Install packages
-sudo apt-get install -y curl
-sudo apt-get install -y git
-sudo apt-get install -y openssh-client
+sudo apt-get install -y curl git openssh-client
 
 # Change default shell to zsh
 chsh --shell $(which zsh) $(whoami)
@@ -20,8 +18,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 git clone https://github.com/jirutka/zsh-shift-select ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-shift-select
 
 # Upgrade packages
-apt-get -y update
-apt-get -y upgrade
+# apt-get -y update
+# apt-get -y upgrade
 
 # Install Node.js
 curl - fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt-get install -y nodejs
