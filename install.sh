@@ -35,5 +35,5 @@ curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshr
 chsh --shell $(which zsh)
 
 # Add SSH Keys
-# eval $(ssh-agent -s)
-# ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
+eval $(ssh-agent -s)
+ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
