@@ -9,7 +9,7 @@ apt-get -y update
 apt-get -y upgrade
 
 # Install zsh
-sh -c "$(curl -fsSL get.zshell.dev)" -- -i skip -b main
+apt-get install -y zsh
 
 # Install packages
 apt-get install -y curl git openssh-client unzip
