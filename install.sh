@@ -1,14 +1,14 @@
 #!bin/bash
 
 # Upgrade packages
-apt-get -y update
-apt-get -y upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 # Install zsh
-apt-get install -y zsh
+sudo apt-get install -y zsh
 
 # Install packages
-apt-get install -y curl git openssh-client unzip
+sudo apt-get install -y curl git openssh-client unzip
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
