@@ -10,18 +10,6 @@ apt-get install -y zsh
 # Install packages
 apt-get install -y curl git openssh-client unzip
 
-# Install Node.js
-curl -fsSL https://fnm.vercel.app/install | bash
-source /home/rodri/.bashrc
-fnm install --lts
-fnm install --latest
-
-# Install Node.js packages
-npm install -g npm pnpm @githubnext/github-copilot-cli
-
-# Auth
-github-copilot-cli auth
-
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -39,3 +27,15 @@ chsh --shell $(which zsh)
 # Add SSH Keys
 eval $(ssh-agent -s)
 ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
+
+# Install Node.js
+curl -fsSL https://fnm.vercel.app/install | bash
+source /home/rodri/.bashrc
+fnm install --lts
+fnm install --latest
+
+# Install Node.js packages
+npm install -g npm pnpm @githubnext/github-copilot-cli
+
+# Auth
+github-copilot-cli auth
