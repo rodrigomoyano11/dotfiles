@@ -1,8 +1,8 @@
 #!bin/bash
 
 # Upgrade packages
-apt-get -y update
-apt-get -y upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 # Install zsh
 sudo apt-get install -y zsh
