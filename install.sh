@@ -9,7 +9,7 @@ apt-get -y update
 apt-get -y upgrade
 
 # Install zsh
-apt-get install -y zsh
+sh -c "$(curl -fsSL get.zshell.dev)" -- -i skip -b main
 
 # Install packages
 apt-get install -y curl git openssh-client unzip
@@ -33,7 +33,7 @@ eval $(ssh-agent -s)
 ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
 
 # Install Node.js
-curl -fsSL https://fnm.vercel.app/install | bash
+curl -fsSL https://fnm.vercel.app/install | zsh
 source /home/rodri/.bashrc
 fnm install --lts
 fnm install --latest
