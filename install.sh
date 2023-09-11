@@ -49,6 +49,8 @@ npm install -g @githubnext/github-copilot-cli
 # Auth
 github-copilot-cli auth
 
+# Alias
 echo 'eval "$(github-copilot-cli alias -- "$0")"' >> ~/.zshrc
+echo 'eval "$(fnm env --use-on-cd)"' >> ~/.zshrc
 
 # --- END of 2nd Step --- #
