@@ -21,7 +21,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 git clone https://github.com/jirutka/zsh-shift-select ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-shift-select
 
 # Add dotfiles
-curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshrc >~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/rodrigomoyano11/dotfiles/main/.zshrc > ~/.zshrc
 
 # Change default shell to zsh
 chsh --shell $(which zsh)
@@ -48,5 +48,7 @@ npm install -g @githubnext/github-copilot-cli
 
 # Auth
 github-copilot-cli auth
+
+echo 'eval "$(github-copilot-cli alias -- "$0")"' >> ~/.zshrc
 
 # --- END of 2nd Step --- #
