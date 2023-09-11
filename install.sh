@@ -1,9 +1,5 @@
 #!bin/bash
 
-# Variables
-default_user=$(logname 2>/dev/null || echo ${SUDO_USER:-${USER}})
-HOME="/home/${default_user}"
-
 # Upgrade packages
 apt-get -y update
 apt-get -y upgrade
@@ -39,7 +35,8 @@ fnm install --lts
 fnm install --latest
 
 # Install Node.js packages
-npm install -g npm pnpm @githubnext/github-copilot-cli
+npm install -g npm pnpm
+npm install -g @githubnext/github-copilot-cli
 
 # Auth
 github-copilot-cli auth
