@@ -1,5 +1,9 @@
 #!bin/bash
 
+# Variables
+default_user=$(logname 2>/dev/null || echo ${SUDO_USER:-${USER}})
+HOME="/home/${default_user}"
+
 # Upgrade packages
 apt-get -y update
 apt-get -y upgrade
