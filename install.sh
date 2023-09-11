@@ -26,6 +26,7 @@ ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
 
 # Set the SHELL environment variable to zsh
 export SHELL=$(which zsh)
+source /home/rodri/.zshrc
 
 # Install Node.js
 curl -fsSL https://fnm.vercel.app/install | zsh
