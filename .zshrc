@@ -28,5 +28,4 @@ DISABLE_UPDATE_PROMPT=true
 bindkey "^Z" undo
 
 # Aliases
-eval "$(github-copilot-cli alias -- "$0")"
 eval $(ssh-agent -s)
