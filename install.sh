@@ -8,14 +8,16 @@ apt-get -y upgrade
 apt-get install -y zsh
 
 # Install packages
-apt-get install -y curl git openssh-client
+apt-get install -y curl git openssh-client unzip
 
 # Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
+curl -fsSL https://fnm.vercel.app/install | bash
+source /home/rodri/.bashrc
+fnm install --lts
+fnm install --latest
 
 # Install Node.js packages
-npm install -g npm pnpm
-npm i -g @githubnext/github-copilot-cli
+npm install -g npm pnpm @githubnext/github-copilot-cli
 
 # Auth
 github-copilot-cli auth
