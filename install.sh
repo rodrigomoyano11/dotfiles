@@ -1,14 +1,10 @@
-#!bin/bash
-
-# Upgrade packages
-apt-get -y update
-apt-get -y upgrade
+#!/bin/bash
 
 # Install zsh
-apt-get install -y zsh
+sudo apt-get install -y zsh
 
 # Install packages
-apt-get install -y curl git openssh-client unzip
+sudo apt-get install -y curl git openssh-client unzip
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -30,9 +26,10 @@ ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
 
 # Install Node.js
 curl -fsSL https://fnm.vercel.app/install | zsh
-source /home/rodri/.bashrc
+source /home/rodri/.zshrc
 fnm install --lts
 fnm install --latest
+
 
 # Install Node.js packages
 npm install -g npm pnpm
