@@ -1,5 +1,7 @@
 #!bin/bash
 
+# --- START of 1st Step --- #
+
 # Upgrade packages
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -28,6 +30,12 @@ chsh --shell $(which zsh)
 eval $(ssh-agent -s)
 ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
 
+# --- END of 1st Step --- #
+
+# --- Close terminal and reopen --- #
+
+# --- START of 2nd Step --- #
+
 # Install Node.js
 curl -fsSL https://fnm.vercel.app/install | zsh
 source /home/rodri/.zshrc
@@ -40,3 +48,5 @@ npm install -g @githubnext/github-copilot-cli
 
 # Auth
 github-copilot-cli auth
+
+# --- END of 2nd Step --- #
