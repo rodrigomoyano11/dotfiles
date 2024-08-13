@@ -43,14 +43,9 @@ fnm install --lts
 fnm install --latest
 
 # Install Node.js packages
-npm install -g npm pnpm
-npm install -g @githubnext/github-copilot-cli
-
-# Auth
-github-copilot-cli auth
+npm install -g npm
 
 # Alias
-echo 'eval "$(github-copilot-cli alias -- "$0")"' >> ~/.zshrc
 echo 'eval "$(fnm env --use-on-cd)"' >> ~/.zshrc
 
 # --- END of 2nd Step --- #
