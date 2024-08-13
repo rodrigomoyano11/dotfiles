@@ -28,4 +28,4 @@ DISABLE_UPDATE_PROMPT=true
 bindkey "^Z" undo
 
 # Aliases
-eval $(ssh-agent -s)
+eval $(ssh-agent -s) &> /dev/null
