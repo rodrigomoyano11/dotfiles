@@ -28,7 +28,9 @@ chsh --shell $(which zsh)
 
 # Add SSH Keys
 eval $(ssh-agent -s)
-ssh-add /mnt/c/Users/rodri/.ssh/id_*[^\.pub]
+cp -r /mnt/c/Users/rodri/.ssh ~
+chmod 400 ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_*[^\.pub]
 
 # --- END of 1st Step --- #
 
